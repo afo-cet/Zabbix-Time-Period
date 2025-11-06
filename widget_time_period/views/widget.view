@@ -1,26 +1,8 @@
 <?php
 /**
- * @var CView $this
- * @var array $data
- *
- * $data contains our config copied in controller init()
+ * Widget d'affichage minimal (aucune dépendance).
+ * Il doit *toujours* s'afficher sans logique externe.
  */
-$container_id = 'tpw_'.bin2hex(random_bytes(6));
-
-$wrap = (new CDiv())
-    ->setId($container_id)
-    ->addClass('time-period-widget');
-
-$wrap->addItem(
-    (new CTag('div', true, 'Loading time range…'))->addClass('time-period-line')
-);
-
-// Pass config to JS
-echo (new CScriptTag('window.ZBX_TIMEPERIOD_WIDGET = window.ZBX_TIMEPERIOD_WIDGET || {};
-ZBX_TIMEPERIOD_WIDGET["'.$container_id.'"] = '.json_encode([
-    'follow_dashboard_time' => (bool)$data['follow_dashboard_time'],
-    'fallback_from' => (string)$data['fallback_from'],
-    'fallback_to'   => (string)$data['fallback_to']
-]).';'));
-
-echo $wrap;
+(new CWidgetView($data))
+  ->addItem(new CTag('div', true, 'Time period widget — baseline OK'))
+  ->show();
