@@ -8,7 +8,7 @@
   "author": "Axel",
   "description": "Shows the dashboard's current time period or a configured relative time range.",
   "assets": {
-    "js": ["assets/widget.js"],
-    "css": ["assets/widget.css"]
+    "js": ["widget.js"],
+    "css": ["widget.css"]
   }
 }
