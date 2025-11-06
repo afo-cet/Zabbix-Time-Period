@@ -1,7 +1,23 @@
 <?php
 /**
- * Formulaire de configuration minimal.
+ * @var CView $this
+ * @var array $data
  */
 $form = (new CFormList());
-$form->addRow(_('Status'), new CSpan('Baseline OK'));
+
+$form->addRow(
+    _('Follow dashboard time selector'),
+    new CCheckBox('config[follow_dashboard_time]', (bool)$data['follow_dashboard_time'])
+);
+
+$form->addRow(
+    _('Fallback "from" (relative, e.g. now-1h, now-24h)'),
+    (new CTextBox('config[fallback_from]', $data['fallback_from']))->setWidth(ZBX_TEXTAREA_SMALL_WIDTH)
+);
+
+$form->addRow(
+    _('Fallback "to" (relative, e.g. now)'),
+    (new CTextBox('config[fallback_to]', $data['fallback_to']))->setWidth(ZBX_TEXTAREA_SMALL_WIDTH)
+);
+
 return (new CWidgetConfig())->addItem($form);

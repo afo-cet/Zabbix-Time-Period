@@ -4,7 +4,7 @@
   "type": "widget",
   "name": "Time period",
   "namespace": "TimePeriod",
-  "version": "1.0",
+  "version": "1.1",
   "author": "Axel",
   "description": "Shows the dashboard's current time period or a configured relative time range.",
   "assets": {
