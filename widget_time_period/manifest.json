@@ -4,11 +4,20 @@
   "type": "widget",
   "name": "Time period",
   "namespace": "TimePeriod",
-  "version": "1.1",
+  "version": "0.2",
   "author": "Axel",
   "description": "Shows the dashboard's current time period or a configured relative time range.",
+  "widget": {
+    "js_class": "WidgetTimePeriod",
+    "title": "Time period",
+    "refresh": "auto"
+  },
   "assets": {
     "js": ["widget.js"],
     "css": ["widget.css"]
+  },
+  "actions": {
+    "widget.time_period.view": "views/widget.view.php",
+    "widget.time_period.edit": "views/widget.edit.php"
   }
 }
