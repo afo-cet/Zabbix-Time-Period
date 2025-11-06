@@ -1,0 +1,19 @@
+.time-period-widget {
+  font: 12px/1.5 var(--font-family, Arial, sans-serif);
+  padding: 8px 10px;
+  color: var(--font-color, #222);
+}
+
+.time-period-widget .time-period-line {
+  white-space: pre-line;
+}
+
+.time-period-widget.following-dashboard .time-period-line::before {
+  content: "Following dashboard time: ";
+  font-weight: 600;
+}
+
+.time-period-widget.using-fallback .time-period-line::before {
+  content: "Fallback time: ";
+  font-weight: 600;
+}

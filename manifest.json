@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2.0,
+  "id": "widget_time_period",
+  "type": "widget",
+  "name": "Time period",
+  "namespace": "TimePeriod",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "description": "Shows the dashboard's current time period or a configured relative time range.",
+  "widget": {
+    "js_class": "WidgetTimePeriod",
+    "title": "Time period",
+    "refresh": "auto"
+  },
+  "assets": {
+    "js": ["assets/widget.js"],
+    "css": ["assets/widget.css"]
+  },
+  "actions": {
+    "widget.time_period.view": "views/widget.view.php",
+    "widget.time_period.edit": "views/widget.edit.php"
+  }
+}
